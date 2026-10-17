@@ -7,7 +7,7 @@ Outil en Bash qui automatise la gestion de dépôts GitHub : création (distante
 | Script | Rôle |
 |---|---|
 | `gitbash.sh` | Lanceur : vérifie les outils et le token, affiche le menu principal |
-| `gitbash_crea.sh` | Crée un dépôt GitHub, invite des collaborateurs, génère l'arborescence locale `Job01…JobNN` et pousse le tout |
+| `gitbash_crea.sh` | Crée un dépôt GitHub, invite des collaborateurs, génère l'arborescence locale `Job01…Job02…` et push le tout |
 | `gitbash_maj.sh` | Envoie sur GitHub les modifications d'un projet local (`add`, `commit`, `push`) |
 | `gitbash_suppr.sh` | Supprime des dépôts sur GitHub, en local, ou les deux |
 | `gitbash.dialogrc` | Thème de couleurs de `dialog` |
@@ -21,7 +21,7 @@ Outil en Bash qui automatise la gestion de dépôts GitHub : création (distante
 
 ### Mise à jour
 - Liste des projets locaux (dossiers contenant un `.git`).
-- Affiche les changements en attente, demande un message de commit, puis pousse.
+- Affiche les changements en attente, demande un message de commit, puis push.
 
 ### Suppression
 - Liste des dépôts dont vous êtes propriétaire (checklist).
@@ -40,7 +40,7 @@ Outil en Bash qui automatise la gestion de dépôts GitHub : création (distante
 ```bash
 git clone git@github.com:<votre-pseudo>/GitBash.git
 cd GitBash
-chmod +x gitbash.sh gitbash_crea.sh gitbash_maj.sh gitbash_suppr.sh
+chmod +x *.sh
 ```
 
 ### Token GitHub
@@ -64,7 +64,7 @@ chmod +x gitbash.sh gitbash_crea.sh gitbash_maj.sh gitbash_suppr.sh
 ./gitbash.sh
 ```
 
-Le menu propose : créer un dépôt, supprimer des dépôts, mettre à jour un dépôt. Le bouton « Précédent » de la première fenêtre d'un script ramène au menu ; dans les fenêtres suivantes, il revient à l'étape précédente.
+Le menu propose : créer un dépôt, supprimer des dépôts, mettre à jour un dépôt.
 
 ## Sécurité
 
@@ -98,6 +98,7 @@ mon-projet/
 └── …
 ```
 
-## Auteur
+## Auteur 
+N3YGUIB
 
 Projet réalisé dans le cadre de la formation à La Plateforme_.
